@@ -1,21 +1,5 @@
 # 
 
-**Über arc42**
-
-arc42, das Template zur Dokumentation von Software- und
-Systemarchitekturen.
-
-Template Version 8.2 DE. (basiert auf AsciiDoc Version), Januar 2023
-
-Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
-contributors. Siehe <https://arc42.org>.
-
-::: note
-Diese Version des Templates enthält Hilfen und Erläuterungen. Sie dient
-der Einarbeitung in arc42 sowie dem Verständnis der Konzepte. Für die
-Dokumentation eigener System verwenden Sie besser die *plain* Version.
-:::
-
 # Einführung und Ziele {#section-introduction-and-goals}
 
 Beschreibt die wesentlichen Anforderungen und treibenden Kräfte, die bei
@@ -136,13 +120,10 @@ von Ihnen zu leistenden Arbeit und Ergebnisse.
 Tabelle mit Rollen- oder Personennamen, sowie deren Erwartungshaltung
 bezüglich der Architektur und deren Dokumentation.
 
-+-----------------+-----------------+-----------------------------------+
 | Rolle           | Kontakt         | Erwartungshaltung                 |
-+=================+=================+===================================+
+|-----------------|-----------------|-----------------------------------|
 | *\<Rolle-1>*    | *\<Kontakt-1>*  | *\<Erwartung-1>*                  |
-+-----------------+-----------------+-----------------------------------+
 | *\<Rolle-2>*    | *\<Kontakt-2>*  | *\<Erwartung-2>*                  |
-+-----------------+-----------------+-----------------------------------+
 
 # Randbedingungen {#section-architecture-constraints}
 
@@ -423,13 +404,10 @@ Hier folgen jetzt Erläuterungen zu Blackboxen der Ebene 1.
 Falls Sie die tabellarische Beschreibung wählen, so werden Blackboxen
 darin nur mit Name und Verantwortung nach folgendem Muster beschrieben:
 
-+-----------------------+-----------------------------------------------+
 | **Name**              | **Verantwortung**                             |
-+=======================+===============================================+
+|-----------------------|-----------------------------------------------|
 | *\<Blackbox 1>*       |  *\<Text>*                                    |
-+-----------------------+-----------------------------------------------+
 | *\<Blackbox 2>*       |  *\<Text>*                                    |
-+-----------------------+-----------------------------------------------+
 
 Falls Sie die ausführliche Liste von Blackbox-Beschreibungen wählen,
 beschreiben Sie jede wichtige Blackbox in einem eigenen
@@ -1006,10 +984,7 @@ Eventuell weitere Spalten mit Übersetzungen, falls notwendig.
 Siehe [Glossar](https://docs.arc42.org/section-12/) in der
 online-Dokumentation (auf Englisch!).
 
-+-----------------------+-----------------------------------------------+
 | Begriff               | Definition                                    |
-+=======================+===============================================+
+|-----------------------|-----------------------------------------------|
 | *\<Begriff-1>*        | *\<Definition-1>*                             |
-+-----------------------+-----------------------------------------------+
 | *\<Begriff-2*         | *\<Definition-2>*                             |
-+-----------------------+-----------------------------------------------+
