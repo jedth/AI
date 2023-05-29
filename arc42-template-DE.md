@@ -317,6 +317,8 @@ Ein-/Ausgaben abbildet.
 
 **\<Diagramm oder Tabelle>**
 
+
+
 **\<optional: Erläuterung der externen technischen Schnittstellen>**
 
 **\<Mapping fachliche auf technische Schnittstellen>**
@@ -647,7 +649,7 @@ online-Dokumentation (auf Englisch!).
 
 ## *\<Bezeichnung Laufzeitszenario 1>*
 
--   \<hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
+
 
 -   \<hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem
     Szenario erläutern>
