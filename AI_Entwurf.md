@@ -437,7 +437,7 @@
         </tr>
         <tr>
             <td>Vorbedingungen</td>
-            <td><li>Kunde hat angegebenes Gerät auch eingeschickt.</li>
+            <td><li>Es existiert ein Angebot.</li>
             <li> Kunde hat Zahlungsinformationen im Nutzerkonto hinterlegt.</li>
             </td>
         </tr>
@@ -470,9 +470,7 @@
             <td>
                 2.1. Das Gerät ist nicht vorhanden und der Prozess wird abgebrochen. Der Kunde wird informiert. <br>
                 2.2. Das fälschliche Angebot wird aus dem System entfernt. <br>
-                4.1. Der Kunde hat noch keine Zahlungsinformationen hinterlegt. <br>
-                4.2. Der Kunde wird aufgefordert, Zahlungsinformationen anzugeben.<br>
-                6.1. Bestätigung wurde nicht erhalten. <br>
+                6.1. Auszahlung war nicht erfolgreich. <br>
                 6.2. Erneute Durchführung von Schritt 5.<br>
                 6.3 Bei dreimaligem Fehlschlagen von Schritt 6 wird die Auszahlung abgebrochen und der Kunde darüber informiert.</td>
         </tr>
