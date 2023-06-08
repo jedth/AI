@@ -361,7 +361,7 @@
         <tr>
             <td>Akteure und Komponenten
             </td>
-            <td>Mitarbeiter, ProductManager, ReviewService, DeviceCatalog</td>
+            <td>Mitarbeiter, ProductManager, CustomerManager, ReviewService, DeviceCatalog</td>
         </tr>
         <tr>
             <td>Ziel</td>
@@ -380,7 +380,10 @@
         <tr>
             <td>Nachbedingungen
             </td>
-            <td><li>Bewertung wurde erstellt und ist im DeviceCatalog gespeichert.</li></td>
+            <td>
+                <li>Bewertung wurde erstellt und ist im DeviceCatalog gespeichert.</li>
+                <li>Angebot wurde erstellt und gespeichert.</li>
+            </td>
         </tr>
         <tr>
             <td>Erfolgsszenario</td>
@@ -389,7 +392,10 @@
                 3. ReviewService generiert aus den Regeln einen Fragenkatalog für den Mitarbeiter. <br>
                 4. Der Mitarbeiter inspiziert das Gerät und füllt den Fragenkatalog aus. <br>
                 5. ReviewService führt mithilfe der Angaben des Mitarbeiters die Bewertung durch und berechnet einen Preis. <br>
-                6. ReviewService sendet Bewertung an DeviceCatalog und ProductManager.</td>
+                6. ReviewService sendet Bewertung an DeviceCatalog und ProductManager.<br>
+                7. ProductManager legt Angebot an und sendet dieses an CustomerManager.<br>
+                8. CustomerManager speichert das Angebot beim Kunden ab.<br>
+            </td>   
         </tr>
         <tr>
             <td>Erweiterungsfälle</td>
@@ -444,22 +450,24 @@
         <tr>
             <td>Nachbedingungen
             </td>
-            <td><li>Kunde hat Auszahlung bekommen.</li>
+            <td><ul><li>Kunde hat Auszahlung bekommen.</li>
             <li>Kunde wurde im Frontend über Auszahlung informiert.</li>
-            <li>Bestand wurde aktualisiert.</li></td>
+            <li>Bestand wurde aktualisiert.</li></ul></td>
         </tr>
         <tr>
             <td>Erfolgsszenario</td>
             <td>
-            1. Kunde nimmt das Angebot über das Frontend an. <br>
-            2. ProductManager überprüft, ob das Gerät wirklich erhalten wurde. <br>
-            3. ProductManager fragt Auszahlung bei Payment an. <br>
-            4. Payment fragt die Zahlungsinformationen des Kunden beim CustomerManager an. <br>
-            5. Payment fragt mithilfe der erhaltenen Zahlungsinformationen die eigentliche Auszahlung beim Finanzsystem an. <br>
-            6. Die Auszahlung wird durchgeführt und eine Bestätigung an Payment geschickt. <br>
-            7. Payment schickt eine Bestätigung an den ProductManager. <br>
-            8. ProductManager löst eine Aktualisierung des Bestands bei DeviceCatalog aus. <br>
-            9. ProductManager bestätigt die Auszahlung beim Frontend des Kunden.</td>
+                1. Kunde nimmt das Angebot über das Frontend an.<br>
+                2. ProductManager überprüft beim CustomerManager, ob das Angebot wirklich existiert und zum anfragenden Kunden gehört.<br>
+                3. ProductManager fragt Auszahlung bei Payment an.<br>
+                4. Payment fragt die Zahlungsinformationen des Kunden beim CustomerManager an.<br>
+                5. Payment fragt mithilfe der erhaltenen Zahlungsinformationen die eigentliche Auszahlung beim Finanzsystem an.<br>
+                6. Die Auszahlung wird durchgeführt und eine Bestätigung an Payment geschickt.<br>
+                7. Payment schickt eine Bestätigung an den ProductManager.<br>
+                8. ProductManager löst eine Aktualisierung des Bestands bei DeviceCatalog aus.<br>
+                9. Das Angebot wird aus dem CustomerManager gelöscht.<br>
+                10. ProductManager bestätigt die Auszahlung beim Frontend des Kunden.<br>
+            </td>
         </tr>
         <tr>
             <td>Erweiterungsfälle</td>
@@ -468,15 +476,15 @@
         <tr>
             <td>Fehlerfälle</td>
             <td>
-                2.1. Das Gerät ist nicht vorhanden und der Prozess wird abgebrochen. Der Kunde wird informiert. <br>
-                2.2. Das fälschliche Angebot wird aus dem System entfernt. <br>
+                2.1. Das Angebot ist ungültig und der Prozess wird abgebrochen.<br>
+                2.2. Der Kunde wird informiert.<br>
                 6.1. Auszahlung war nicht erfolgreich. <br>
                 6.2. Erneute Durchführung von Schritt 5.<br>
                 6.3 Bei dreimaligem Fehlschlagen von Schritt 6 wird die Auszahlung abgebrochen und der Kunde darüber informiert.</td>
         </tr>
         <tr>
             <td>Häufigkeit</td>
-            <td>Einmal im Monat bei jedem zweiten Kunden</td>
+            <td>Einmal im Monat bei 2/3 der Kunden.</td>
         </tr>
         <tr>
             <td>Zugrundeliegende Anforderungen</td>
